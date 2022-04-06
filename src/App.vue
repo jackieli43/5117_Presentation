@@ -3,11 +3,21 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/example">Example</router-link>
+      <router-link to="/example">Example</router-link>|
+
+    <login-button/>
     </nav>
     <router-view/>
   </div>
 </template>
+
+<script>
+import LoginButton from './components/LoginButton.vue'
+export default {
+  components: { LoginButton },
+  
+}
+</script>
 
 <style>
 #app {
