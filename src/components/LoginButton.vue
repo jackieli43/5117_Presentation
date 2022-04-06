@@ -51,6 +51,7 @@ export default {
       signOut(auth)
         .then(() => {
           this.user = null;
+          
         })
         .catch(err => console.log(err));
     }

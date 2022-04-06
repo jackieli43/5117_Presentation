@@ -1,14 +1,28 @@
 <template>
   <div class="hello">
+    <editable-span :text="text" @edited="onEdit"> </editable-span>
+    {{text}}
   </div>
 </template>
 
 <script>
+import EditableSpan from './EditableSpan.vue'
 
 export default {
+  components: { EditableSpan },
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data: function() {
+    return {
+      text:"apple"
+    }
+  },
+  methods: {
+    onEdit: function(newVal) {
+      this.text = newVal
+    }
   }
 }
 </script>

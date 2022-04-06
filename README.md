@@ -1,5 +1,8 @@
 # example
 
+REMINDER FROM LECTURE:
+I recommend NOT mucking about with the .env file for this problem. Instead I recommend copying the firebase code right from google.
+
 ## Project setup
 ```
 npm install
