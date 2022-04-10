@@ -18,7 +18,6 @@
 
 <script>
 import { auth, provider } from "@/firebaseConfig";
-import { onAuthStateChanged, signInWithRedirect, signOut } from "firebase/auth";
 
 export default {
     components: {},
@@ -29,7 +28,7 @@ export default {
     };
   },
   beforeCreate: function() {
-    onAuthStateChanged(auth, user => {
+    auth.onAuthStateChanged(user => {
        console.log("user state:", user);
       // uncomment above to check out which user properties are available.
       if (user) {        
@@ -41,14 +40,14 @@ export default {
   },
   methods: {
     signInWithGoogle: function() {
-      signInWithRedirect(auth, provider)
+      auth.signInWithRedirect(provider)
         .then(result => {
           this.user = result.user;
         })
         .catch(err => console.log(err));
     },
     signOut: function() {
-      signOut(auth)
+      auth.signOut()
         .then(() => {
           this.user = null;
           

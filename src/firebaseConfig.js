@@ -1,23 +1,24 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
-  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.VUE_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyDooncfhMs3AiPw3yGkEdB2_3Cut2wLflU",
+  authDomain: "ongoing-session-example.firebaseapp.com",
+  projectId: "ongoing-session-example",
+  storageBucket: "ongoing-session-example.appspot.com",
+  messagingSenderId: "410416559561",
+  appId: "1:410416559561:web:662af9b992c11ddec1a418"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 // initalize components
-export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider();
+export const auth = firebase.auth();
+export const provider = new firebase.auth.GoogleAuthProvider();
 
+export const db = firebase.firestore();

@@ -4,6 +4,8 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ExampleView from '../views/ExampleView.vue'
 import ExampleIdView from '../views/ExampleIdView.vue'
+import IdeaView from '../views/IdeaView.vue'
+import GetIdeaView from '../views/GetIdeaView.vue'
 
 import {auth} from "@/firebaseConfig.js"
 Vue.use(VueRouter)
@@ -24,6 +26,17 @@ const routes = [
     name: 'example',
     component: ExampleIdView,
     props:true
+  },
+  {
+    path: '/idea/:ideaId',
+    name: 'ideaView',
+    component: IdeaView,
+    props:true
+  },
+  {
+    path: '/idea',
+    name: 'getIdeaView',
+    component: GetIdeaView
   },
   {
     path: '/about',

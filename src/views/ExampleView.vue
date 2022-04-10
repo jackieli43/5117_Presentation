@@ -8,9 +8,14 @@
 
 <script>
 import ImageToggle from '@/components/ImageToggle.vue'
+
 export default {
   components: { ImageToggle },
-
+  data: function() {
+    return {
+      test_vals: false
+    }
+  },
 }
 </script>
 
