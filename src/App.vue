@@ -13,37 +13,48 @@
 </template>
 
 <script>
-import { auth } from "@/firebaseConfig";
+//import { auth } from "@/firebaseConfig";
 
 import LoginButton from './components/LoginButton.vue'
 export default {
   components: { LoginButton },
-  beforeCreate: function() {
-
-    auth.getRedirectResult().then(result=>{
-      if (result.user) {
-        console.log('result: ', result)
-        this.$router.push("/youDidIt")
-      }
-    }).catch(() => {
-      this.$router.push("/itsAllForNothing")
-    })
-  }
 }
 </script>
 
 <style>
+
+html {
+  height: 100%;
+  width: 100%;
+
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;  
+
 }
 
 nav {
   text-align: center;
   padding: 30px;
+  background-color: orange;
+
 }
 
 nav a {

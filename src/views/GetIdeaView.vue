@@ -1,6 +1,15 @@
 <template>
-  <div>
-    <h1> Ideas </h1>
+  <div class="getIdeaParent">
+      <div class="getIdeaTitle">
+         <h1> Ideas </h1>
+      </div>
+      <h1> So Many Great Ideas</h1>
+
+      <div class="getIdeaBodyTitle">
+          <h1> Look at all these great Ideas</h1>
+      </div>
+
+      
     <div v-if="ideas===false">
         loading
     </div>
@@ -56,6 +65,22 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+h1 {
+    color: blue;
+}
+
+.getIdeaTitle {
+    color: red;
+}
+
+.getIdeaTitle > h1 {
+    color: orange;
+}
+
+.getIdeaBodyTitle > h1 {
+    color: green;
+}
 
 </style>
