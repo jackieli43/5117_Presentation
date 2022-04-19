@@ -27,8 +27,8 @@ const routes = [
     props:true
   },
   {
-    path: '/idea',
-    name: 'specialTopics',
+    path: '/special-topics',
+    name: 'special-topics',
     component: SpecialTopics
   },
   {
