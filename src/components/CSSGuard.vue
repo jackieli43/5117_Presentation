@@ -1,8 +1,7 @@
 <template>
   <div class="demo">
     <div id="square"></div>
-    <button>Hello</button>
-    <a>World</a>
+    <button>Hello world</button>
   </div>
 </template>
 
@@ -24,7 +23,7 @@ export default {};
 
 // CSS Guards Option 1
 #square when (@red-square = true) {
-    background-color: red;
+  background-color: red;
 }
 
 #square when not (@red-square = true) {

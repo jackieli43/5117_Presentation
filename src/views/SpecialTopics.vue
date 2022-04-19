@@ -6,30 +6,35 @@
       <option>CSS Guards</option>
       <option>Detached Rulesets</option>
       <option>Maps</option>
-      <option>Import & Plugin</option>
+      <option>Import</option>
     </select>
 
-    <CSSGuard v-if="selected=='CSS Guards'" />
-    <detached-rulesets v-if="selected=='Detached Rulesets'" />
-    <maps-comp v-if="selected=='Maps'" />
-    <import-plugin v-if="selected=='Import & Plugin'" />
-
+    <CSSGuard v-if="selected == 'CSS Guards'" />
+    <detached-rulesets v-if="selected == 'Detached Rulesets'" />
+    <maps-comp v-if="selected == 'Maps'" />
+    <import-comp v-if="selected == 'Import'" />
+    <plugin-comp v-if="selected == 'Plugin'" />
   </div>
 </template>
 
 <script>
-import CSSGuard from '@/components/CSSGuard.vue';
-import DetachedRulesets from '@/components/DetachedRulesets.vue';
-import MapsComp from '@/components/MapsComp.vue';
-import ImportPlugin from '@/components/ImportPlugin.vue';
+import CSSGuard from "@/components/CSSGuard.vue";
+import DetachedRulesets from "@/components/DetachedRulesets.vue";
+import MapsComp from "@/components/MapsComp.vue";
+import ImportComp from "@/components/ImportComp.vue";
 export default {
-  components: { CSSGuard, DetachedRulesets, MapsComp, ImportPlugin },
+  components: {
+    CSSGuard,
+    DetachedRulesets,
+    MapsComp,
+    ImportComp,
+  },
   name: "SpecialTopics",
   data: function () {
     return {
-      selected: ''
-    }
-  }
+      selected: "",
+    };
+  },
 };
 </script>
 
