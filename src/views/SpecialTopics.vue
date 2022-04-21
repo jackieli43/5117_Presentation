@@ -40,7 +40,8 @@ export default {
 
 <style lang="less" scoped>
 .center {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
   border: 3px solid #42b983;
   padding: 10px;

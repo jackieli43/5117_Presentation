@@ -5,19 +5,14 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/example">Example</router-link>|
       <router-link to="/special-topics">Special Topics</router-link>
-
-    <login-button/>
     </nav>
     <router-view/>
   </div>
 </template>
 
 <script>
-//import { auth } from "@/firebaseConfig";
-
-import LoginButton from './components/LoginButton.vue'
 export default {
-  components: { LoginButton },
+  components: { },
 }
 </script>
 
