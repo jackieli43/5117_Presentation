@@ -48,7 +48,6 @@ body {
 nav {
   text-align: center;
   padding: 30px;
-  background-color: orange;
 
 }
 

@@ -39,6 +39,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+div {
+  text-align: left;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;

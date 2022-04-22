@@ -1,7 +1,6 @@
 <template>
   <div class="demo">
-    <div id="square"></div>
-    <button>Hello world</button>
+    <div id="block"></div>
   </div>
 </template>
 
@@ -10,33 +9,22 @@ export default {};
 </script>
 
 <style lang="less" scoped>
-#square {
-    border: 1px solid black;
-    width: 200px;
-    height: 200px;
-    background-color: blue;
+#block {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
 }
 
 // variable
-@red-square: false;
-@dark-mode: false;
+@make-it-red: false;
 
-// CSS Guards Option 1
-#square when (@red-square = true) {
+// CSS Guards
+#block when (@make-it-red = true) {
   background-color: red;
 }
 
-#square when not (@red-square = true) {
+#block when not (@make-it-red = true) {
   background-color: yellow;
 }
-
-// CSS Guards Option 2
-@dr: if(@dark-mode = true, {
-  button {
-    background-color: black;
-    color: white;
-  }
-});
-@dr(true);
-
 </style>

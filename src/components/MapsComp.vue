@@ -30,27 +30,28 @@ export default {};
   }
 }
 
-@data-mode: diverging;
+@data-mode: sequential;
 
 .block {
     border: 1px solid black;
     width: 50px;
     height: 50px;
+    display: inline-block;
 }
 
-#b1 when (@data-mode = sequantial) {
+#b1 when (@data-mode = sequential) {
     background-color: #library.sequential-colors[c1];
 }
-#b2 when (@data-mode = sequantial) {
+#b2 when (@data-mode = sequential) {
     background-color: #library.sequential-colors[c2];
 }
-#b3 when (@data-mode = sequantial) {
+#b3 when (@data-mode = sequential) {
     background-color: #library.sequential-colors[c3];
 }
-#b4 when (@data-mode = sequantial) {
+#b4 when (@data-mode = sequential) {
     background-color: #library.sequential-colors[c4];
 }
-#b5 when (@data-mode = sequantial) {
+#b5 when (@data-mode = sequential) {
     background-color: #library.sequential-colors[c5];
 }
 

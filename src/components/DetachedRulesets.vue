@@ -62,7 +62,7 @@ export default {};
   }
 };
 
-.special-topics {
-  @fontset1();
+div {
+  @fontset2();
 }
 </style>
